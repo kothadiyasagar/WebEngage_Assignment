@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div  id="data" style="width: 500px; margin:auto; margin-top: 200px; justify-content: center;">
+         
+
+    </div>
+  </body>
+  <script>
+     const user =   JSON.parse(localStorage.getItem('user'))
+
+     const data = document.getElementById("data")
+
+     const email = document.createElement("h3")
+      email.innerHTML =`Email : ${user.email}`
+ const mobile_Number = document.createElement("h3")
+   mobile_Number.innerHTML =`Mobile Number : +${user.countryCode}- ${user.mobile}`
+
+      data.append(email,mobile_Number)
+
+  </script>
+</html>
